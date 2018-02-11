@@ -145,7 +145,7 @@ if (isset($_POST['submit'])){
     </div>
       <div class="features">
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-6">
             <div class="info">
               <div class="icon icon-info">
                 <i class="material-icons">camera</i>
@@ -154,15 +154,16 @@ if (isset($_POST['submit'])){
               <p>Barrels are measured in litres and range from 1 to 5 litres in volume.</p>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-6">
             <div class="info">
               <div class="icon icon-success">
                 <i class="material-icons">verified_user</i>
               </div>
                 <h4 class="info-title">2. Metal</h4>
-                <p>Metal refers to the material of the barrel&apos;s rings. The options are galvanized steel, black steel, or brass.</p>
+                <p>Metal refers to the material of the barrel&apos;s rings. The options are galvanized steel, black steel, or brass. Indicate your choice in the Description section of the paypal checkout.</p>
             </div>
           </div>
+          <!--
           <div class="col-md-4">
             <div class="info">
               <div class="icon icon-danger">
@@ -172,7 +173,7 @@ if (isset($_POST['submit'])){
                 <p>Choose to add a varnish to the inside of the barrel. This helps to extend the barrel&apos;s longevity.</p>
             </div>
           </div>
-          <!-- Upload picture for engraving
+          Upload picture for engraving
 
           <div class="col-md-3">
             <div class="info">
@@ -188,7 +189,7 @@ if (isset($_POST['submit'])){
     </div>
 
 
-<!-- Order Form begins --> 
+<!--Order Form begins 
 
     <div class="section text-center">
       <h2 class="title">Order Form</h2>
@@ -220,7 +221,7 @@ if (isset($_POST['submit'])){
           <br>
           <hr>
         </fieldset>
-        <!-- <fieldset>
+        <fieldset>
           <legend>Add Custom Logo ($14) ?</legend>
             <input type="radio" name="add_logo" value="yes" required>Yes
             <input type="radio" name="add_logo" value="no" required>No
@@ -228,7 +229,7 @@ if (isset($_POST['submit'])){
           <br>
             <input id="form_button" type="file" name="custom_logo" accept="image/*">
         </fieldset>
-        <hr> -->
+        <hr>
       </div>
 
     <div class="section section-contacts">
@@ -237,7 +238,7 @@ if (isset($_POST['submit'])){
     <h2 class="text-center title">Shipping Information</h2>
     <h4 class="text-center description">This information will be used to complete your order. We&apos;ve also provided a commentary box for any other comments or requests you may have.</h4>
             <div class="row">
-              <!-- Full Name input -->
+             
               <div class="col-md-6">
                 <div class="form-group">
                   <input id="customer_name" class="form-control" name="customer_name" type="text" placeholder="Full Name"
@@ -245,13 +246,13 @@ if (isset($_POST['submit'])){
                   <p class="help-block"></p>
                 </div>
               </div>
-              <!-- Email input -->
+              
               <div class="col-md-6">
                 <div class="form-group">
                 <input type="email" class="form-control" id="customer_email" placeholder="Email Address" required>
                 </div>
               </div>
-              <!-- address-line1 input-->
+              
               <div class="col-md-6">
                 <div class="form-group">
                         <input id="address_line1" class="form-control" name="address_line1" type="text" placeholder="Address Line 1"
@@ -259,7 +260,7 @@ if (isset($_POST['submit'])){
                         <p class="help-block">Street address, P.O. box, company name, c/o</p>
                 </div>
               </div>
-                <!-- address-line2 input-->
+                
                 <div class="col-md-6">
                 <div class="form-group">
                         <input id="address_line2" class="form-control" name="address_line2" type="text" placeholder="Address Line 2" 
@@ -267,14 +268,14 @@ if (isset($_POST['submit'])){
                         <p class="help-block">Apartment, suite , unit, building, floor, etc.</p>
                 </div>
                 </div>
-                <!-- city input-->
+                
                 <div class="col-md-6">
                 <div class="form-group">
                   <input id="city" class="form-control" name="city" type="text" placeholder="City / Town" class="input-xlarge" required>
                   <p class="help-block"></p>
                 </div>
                 </div>
-                <!-- region input-->
+                
                 <div class="col-md-6">
                 <div class="form-group">
                   <input id="region" class="form-control" name="region" type="text" placeholder="Province / State / Region"
@@ -282,7 +283,7 @@ if (isset($_POST['submit'])){
                   <p class="help-block"></p>
                 </div>
                 </div>
-                <!-- postal-code input-->
+               
                 <div class="col-md-6">
                 <div class="form-group">
                   <input id="postal_code" class="form-control" name="postal_code" type="text" placeholder="Postal Code"
@@ -290,7 +291,7 @@ if (isset($_POST['submit'])){
                   <p class="help-block"></p>
                 </div>
                 </div>
-                <!-- country select -->
+                
                 <div class="col-md-6">
                 <div class="form-group">
                   <label class="form-label">Country</label>
@@ -314,9 +315,9 @@ if (isset($_POST['submit'])){
       </div>
       <button type="submit" class="btn btn-default">Confirm Order</button>
     </form>
-    <div id="paypal-button"></div>
+    <div id="paypal-button"></div> -->
 
-  <script>
+  <!-- <script>
     paypal.Button.render({
       env: 'production', // Or 'sandbox',
 
@@ -351,7 +352,7 @@ if (isset($_POST['submit'])){
          */
       }
     }, '#paypal-button');
-  </script>
+  </script> -->
   <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
     <input type="hidden" name="cmd" value="_s-xclick">
     <input type="hidden" name="hosted_button_id" value="DYMK96RVXNNU6">
