@@ -312,6 +312,7 @@ if (isset($_POST['submit'])){
       </div>
       <button type="submit" class="btn btn-default">Confirm Order</button>
     </form>
+    
   </div>
 </div>
 
