@@ -6,8 +6,33 @@
     2. User can place order directly on site.
     3. User can see products immediately.
     4. Minimal navigation necessary on user's behalf.
-    -->
 
+<?php 
+if (isset($_POST['submit'])){
+  $to = "mattbbwhite@gmail.com";
+  $from = "Urban Barrel Site";
+  $name = "Customer name: " . $_POST['customer_name'];
+  $email = $_POST['customer_email'];
+  $subject = "Order Request from " . $name;
+  $subject2 = "Copy of your recent Urban Barrel order.";
+  $headers = "From: " . $email;
+  $headers2 = "From: " . $to;
+
+  //Order specs
+  $size = "Barrel Size: " . $_POST['barrel_size'];
+  $metal = "\nHoop Style: " . $_POST['hoop_type'];
+  $varnish = "\nAdd Varnish?: " . $_POST['add_varnish'];
+  $logo =  "\nAdd Logo?: " . $_POST['add_logo'];
+  $message = "\nCustomer Message: " . $_POST['customer_message'];
+
+  $content = $name . $email . $size . $metal . $varnish .$logo . $message . "\n\nEnd of Order."; 
+
+  $headers = "From:" . $from;
+  mail($to,$subject,$content,$headers);
+  mail($email,$subject2,$content,$headers2); // sends a copy of the message to the sender
+  echo "Mail Sent. Thank you " . $name . ", we will contact you shortly.";
+}
+?> -->
     <!DOCTYPE html>
     <html lang="en">
 
@@ -26,7 +51,7 @@
     <!-- Fonts and icons -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="../assets/css/material-kit.css?v=2.0.0">
+    <link rel="stylesheet" href="./assets/css/material-kit.css?v=2.0.0">
     </head>
 
 
@@ -143,21 +168,24 @@
           </div>
           <div class="col-md-3">
             <div class="info">
-              <div class="icon icon-danger">
-                <i class="material-icons">photo size select actual</i>
+              <div class="icon icon-info">
+                <i class="material-icons">camera</i>
               </div>
-                <h4 class="info-title">4. Personal Touch</h4>
-                <p>Upload a picture to have it engraved into the rounded face of the barrel.</p>
+              <h4 class="info-title">4. Personal Touch</h4>
+              <p>Upload a picture to have it engraved into your barrel.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Order Form begins --> 
+
+
+<!-- Order Form begins --> 
+
     <div class="section text-center">
       <h2 class="title">Order Form</h2>
       <hr>
-    <form  id="barrel_order_form"> <!-- onsubmit="submitForm()" -->
+    <form  method="POST" action="order-a-barrel.php" id="barrel_order_form">
       <div class="form-radio">
         <fieldset>
           <legend>Barrel Size (Litres)</legend>
@@ -198,26 +226,76 @@
     <div class="section section-contacts">
     <div class="row">
     <div class="col-md-8 ml-auto mr-auto">
-    <h2 class="text-center title">Extra Information</h2>
-    <h4 class="text-center description">Give us your name and email address so we can send you a confirmation and copy of your order. We&apos;ve also provided a commentary box for any other comments or requests you may have.</h4>
+    <h2 class="text-center title">Shipping Information</h2>
+    <h4 class="text-center description">This information will be used to complete your order. We&apos;ve also provided a commentary box for any other comments or requests you may have.</h4>
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                <label class="bmd-label-floating">Your Name</label>
-                <input type="text" class="form-control" id="customer_name" required>
+                        <input id="customer_name-name" class="form-control" name="full-name" type="text" placeholder="Full Name"
+                        class="input-xlarge">
+                        <p class="help-block"></p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                <label class="bmd-label-floating">Your Email</label>
-                <input type="email" class="form-control" id="customer_email" required>
+                <input type="email" class="form-control" id="customer_email" placeholder="Email Address" required>
                 </div>
               </div>
-            </div>
-            <div class="form-group">
-              <label for="exampleMessage" class="bmd-label-floating">Your Message</label>
-              <textarea type="text" class="form-control" rows="4" id="customer_message"></textarea>
-            </div>
+              <!-- address-line1 input-->
+              <div class="col-md-6">
+                <div class="form-group">
+                        <input id="address-line1" class="form-control" name="address-line1" type="text" placeholder="Address Line 1"
+                        class="input-xlarge">
+                        <p class="help-block">Street address, P.O. box, company name, c/o</p>
+                </div>
+              </div>
+                <!-- address-line2 input-->
+                <div class="col-md-6">
+                <div class="form-group">
+                        <input id="address-line2" class="form-control" name="address-line2" type="text" placeholder="Address Line 2" 
+                        class="input-xlarge">
+                        <p class="help-block">Apartment, suite , unit, building, floor, etc.</p>
+                </div>
+                </div>
+                <!-- city input-->
+                <div class="col-md-6">
+                <div class="form-group">
+                        <input id="city" class="form-control" name="city" type="text" placeholder="City / Town" class="input-xlarge">
+                        <p class="help-block"></p>
+                </div>
+                </div>
+                <!-- region input-->
+                <div class="col-md-6">
+                <div class="form-group">
+                        <input id="region" class="form-control" name="region" type="text" placeholder="Province / State / Region"
+                        class="input-xlarge">
+                        <p class="help-block"></p>
+                </div>
+                </div>
+                <!-- postal-code input-->
+                <div class="col-md-6">
+                <div class="form-group">
+                        <input id="postal-code" class="form-control" name="postal-code" type="text" placeholder="Postal Code"
+                        class="input-xlarge">
+                        <p class="help-block"></p>
+                </div>
+                </div>
+                <!-- country select -->
+                <div class="col-md-6">
+                <div class="form-group">
+                    <label class="form-label">Country</label>
+                        <select id="country" name="country" class="input-xlarge">
+                            <option value="" selected="selected">(please select a country)</option>
+                            <option value="CA">Canada</option>
+                            <option value="US">United States</option>
+                          </select>
+                </div>
+                </div>
+                <div class="col-md-6">
+                <div class="form-group">
+                  <textarea type="text" class="form-control" placeholder="Your Message" rows="4" id="customer_message"></textarea>
+                </div>
+                </div>
             <div class="row">
               <div class="col-md-4 ml-auto mr-auto text-center"></div>
             </div>
@@ -254,9 +332,9 @@
     <script src="../assets/js/bootstrap-material-design.js"></script>
     <!--  Plugin for Date Time Picker and Full Calendar Plugin  -->
     <script src="../assets/js/plugins/moment.min.js"></script>
-    <!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
+    <!--  Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
     <script src="../assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
-    <!--	Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+    <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
     <script src="../assets/js/plugins/nouislider.min.js"></script>
   </body>
 </html>
