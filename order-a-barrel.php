@@ -344,5 +344,7 @@ if (isset($_POST['submit'])){
     <script src="../assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
     <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
     <script src="../assets/js/plugins/nouislider.min.js"></script>
+    <!-- PayPal script -->
+    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
   </body>
 </html>
