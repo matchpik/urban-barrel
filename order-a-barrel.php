@@ -142,7 +142,7 @@ if (isset($_POST['submit'])){
           <div class="col-md-3">
             <div class="info">
               <div class="icon icon-info">
-                <i class="material-icons">format size</i>
+                <i class="material-icons">camera</i>
               </div>
               <h4 class="info-title">1. Size</h4>
               <p>Barrels are measured in litres and range from 1 to 5 litres in volume.</p>
@@ -160,7 +160,7 @@ if (isset($_POST['submit'])){
           <div class="col-md-3">
             <div class="info">
               <div class="icon icon-danger">
-                <i class="material-icons">all out</i>
+                <i class="material-icons">book</i>
               </div>
                 <h4 class="info-title">3. Varnish</h4>
                 <p>Choose to add a varnish to the inside of the barrel. This helps to extend the barrel&apos;s longevity.</p>
