@@ -236,7 +236,7 @@ if (isset($_POST['submit'])){
               <div class="col-md-6">
                 <div class="form-group">
                   <input id="customer_name" class="form-control" name="customer_name" type="text" placeholder="Full Name"
-                  class="input-xlarge">
+                  class="input-xlarge" required>
                   <p class="help-block"></p>
                 </div>
               </div>
@@ -249,7 +249,7 @@ if (isset($_POST['submit'])){
               <div class="col-md-6">
                 <div class="form-group">
                         <input id="address_line1" class="form-control" name="address_line1" type="text" placeholder="Address Line 1"
-                        class="input-xlarge">
+                        class="input-xlarge" required>
                         <p class="help-block">Street address, P.O. box, company name, c/o</p>
                 </div>
               </div>
@@ -264,7 +264,7 @@ if (isset($_POST['submit'])){
                 <!-- city input-->
                 <div class="col-md-6">
                 <div class="form-group">
-                  <input id="city" class="form-control" name="city" type="text" placeholder="City / Town" class="input-xlarge">
+                  <input id="city" class="form-control" name="city" type="text" placeholder="City / Town" class="input-xlarge" required>
                   <p class="help-block"></p>
                 </div>
                 </div>
@@ -272,7 +272,7 @@ if (isset($_POST['submit'])){
                 <div class="col-md-6">
                 <div class="form-group">
                   <input id="region" class="form-control" name="region" type="text" placeholder="Province / State / Region"
-                  class="input-xlarge">
+                  class="input-xlarge" required>
                   <p class="help-block"></p>
                 </div>
                 </div>
@@ -280,7 +280,7 @@ if (isset($_POST['submit'])){
                 <div class="col-md-6">
                 <div class="form-group">
                   <input id="postal_code" class="form-control" name="postal_code" type="text" placeholder="Postal Code"
-                  class="input-xlarge">
+                  class="input-xlarge" required>
                   <p class="help-block"></p>
                 </div>
                 </div>
@@ -288,7 +288,7 @@ if (isset($_POST['submit'])){
                 <div class="col-md-6">
                 <div class="form-group">
                   <label class="form-label">Country</label>
-                    <select id="country" name="country" class="input-xlarge">
+                    <select id="country" name="country" class="input-xlarge" required>
                       <option value="" selected="selected">(please select a country)</option>
                       <option value="CA">Canada</option>
                       <option value="US">United States</option>

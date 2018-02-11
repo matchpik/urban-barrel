@@ -6,7 +6,36 @@
     2. User can place order directly on site.
     3. User can see products immediately.
     4. Minimal navigation necessary on user's behalf.
-    -->   
+<?php 
+if (isset($_POST['submit'])){
+  // Company info
+  $to = "mattbbwhite@gmail.com";
+  $from = "Urban Barrel Site";
+
+  //Order info
+  $size = "\nBarrel Size: " . $_POST['barrel_size'];
+  $metal = "\nHoop Style: " . $_POST['hoop_type'];
+  $varnish = "\nAdd Varnish?: " . $_POST['add_varnish'];
+  $logo =  "\nAdd Logo?: " . $_POST['add_logo'];
+  $message = "\nCustomer Message: " . $_POST['customer_message'];
+
+  // Shipping Info
+  $customer_name = "\n" . $_POST['customer_name'];
+  $customer_email = "\n" . $_POST['customer_email'];
+  $address_1 = "\n" . $_POST['address_line1'];
+  $address_2 = "\n" . $_POST['address_line2'];
+  $city = "\n" . $_POST['city'];
+  $region = "\n" . $_POST['region'];
+  $country = "\n" . $_POST['country'];
+
+  // Email Content
+  $content = $customer_name . $customer_email . $size . $metal . $varnish .$logo . $message . "\n\nShipping info: " . $address_1 . $address_2 . $city . $region . $country . "\n\nEnd Of Order"; 
+
+  $headers = "From:" . $from;
+  mail($to,$subject,$content,$headers);
+  mail($email,$subject2,$content,$headers2); // sends a copy of the message to the sender
+}
+?>  -->   
     <!DOCTYPE html>
     <html lang="en">
 
@@ -25,7 +54,7 @@
     <!-- Fonts and icons -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="./assets/css/material-kit.css?v=2.0.0">
+    <link rel="stylesheet" href="../assets/css/material-kit.css?v=2.0.0">
     </head>
 
 
@@ -206,7 +235,7 @@
               <div class="col-md-6">
                 <div class="form-group">
                   <input id="customer_name" class="form-control" name="customer_name" type="text" placeholder="Full Name"
-                  class="input-xlarge">
+                  class="input-xlarge" required>
                   <p class="help-block"></p>
                 </div>
               </div>
@@ -219,7 +248,7 @@
               <div class="col-md-6">
                 <div class="form-group">
                         <input id="address_line1" class="form-control" name="address_line1" type="text" placeholder="Address Line 1"
-                        class="input-xlarge">
+                        class="input-xlarge" required>
                         <p class="help-block">Street address, P.O. box, company name, c/o</p>
                 </div>
               </div>
@@ -234,7 +263,7 @@
                 <!-- city input-->
                 <div class="col-md-6">
                 <div class="form-group">
-                  <input id="city" class="form-control" name="city" type="text" placeholder="City / Town" class="input-xlarge">
+                  <input id="city" class="form-control" name="city" type="text" placeholder="City / Town" class="input-xlarge" required>
                   <p class="help-block"></p>
                 </div>
                 </div>
@@ -242,7 +271,7 @@
                 <div class="col-md-6">
                 <div class="form-group">
                   <input id="region" class="form-control" name="region" type="text" placeholder="Province / State / Region"
-                  class="input-xlarge">
+                  class="input-xlarge" required>
                   <p class="help-block"></p>
                 </div>
                 </div>
@@ -250,7 +279,7 @@
                 <div class="col-md-6">
                 <div class="form-group">
                   <input id="postal_code" class="form-control" name="postal_code" type="text" placeholder="Postal Code"
-                  class="input-xlarge">
+                  class="input-xlarge" required>
                   <p class="help-block"></p>
                 </div>
                 </div>
@@ -258,7 +287,7 @@
                 <div class="col-md-6">
                 <div class="form-group">
                   <label class="form-label">Country</label>
-                    <select id="country" name="country" class="input-xlarge">
+                    <select id="country" name="country" class="input-xlarge" required>
                       <option value="" selected="selected">(please select a country)</option>
                       <option value="CA">Canada</option>
                       <option value="US">United States</option>
