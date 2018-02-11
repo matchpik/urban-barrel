@@ -9,64 +9,34 @@
     -->
 <?php 
 if (isset($_POST['submit'])){
+  // Company info
   $to = "mattbbwhite@gmail.com";
   $from = "Urban Barrel Site";
-  $name = "Customer name: " . $_POST['customer_name'];
-  $email = $_POST['customer_email'];
-  $subject = "Order Request from " . $name;
-  $subject2 = "Copy of your recent Urban Barrel order.";
-  $headers = "From: " . $email;
-  $headers2 = "From: " . $to;
 
-  //Order specs
-  $size = "Barrel Size: " . $_POST['barrel_size'];
+  //Order info
+  $size = "\nBarrel Size: " . $_POST['barrel_size'];
   $metal = "\nHoop Style: " . $_POST['hoop_type'];
   $varnish = "\nAdd Varnish?: " . $_POST['add_varnish'];
   $logo =  "\nAdd Logo?: " . $_POST['add_logo'];
   $message = "\nCustomer Message: " . $_POST['customer_message'];
 
-  $content = $name . $email . $size . $metal . $varnish .$logo . $message . "\n\nEnd of Order."; 
+  // Shipping Info
+  $customer_name = "\n" . $_POST['customer_name'];
+  $customer_email = "\n" . $_POST['customer_email'];
+  $address_1 = "\n" . $_POST['address_line1'];
+  $address_2 = "\n" . $_POST['address_line2'];
+  $city = "\n" . $_POST['city'];
+  $region = "\n" . $_POST['region'];
+  $country = "\n" . $_POST['country'];
+
+  // Email Content
+  $content = $customer_name . $customer_email . $size . $metal . $varnish .$logo . $message . "\n\nShipping info: " . $address_1 . $address_2 . $city . $region . $country . "\n\nEnd Of Order"; 
 
   $headers = "From:" . $from;
   mail($to,$subject,$content,$headers);
   mail($email,$subject2,$content,$headers2); // sends a copy of the message to the sender
-  echo "Mail Sent. Thank you " . $name . ", we will contact you shortly.";
 }
-?>    <!-- 
-    Responsive website for Jeff Roberts at Urban Barrel Company.
-    Operating out of Ottawa, ON, CANADA.
-
-    1. Website should be user friendly and user should land on a buying page.
-    2. User can place order directly on site.
-    3. User can see products immediately.
-    4. Minimal navigation necessary on user's behalf.
-
-<?php 
-if (isset($_POST['submit'])){
-  $to = "mattbbwhite@gmail.com";
-  $from = "Urban Barrel Site";
-  $name = "Customer name: " . $_POST['customer_name'];
-  $email = $_POST['customer_email'];
-  $subject = "Order Request from " . $name;
-  $subject2 = "Copy of your recent Urban Barrel order.";
-  $headers = "From: " . $email;
-  $headers2 = "From: " . $to;
-
-  //Order specs
-  $size = "Barrel Size: " . $_POST['barrel_size'];
-  $metal = "\nHoop Style: " . $_POST['hoop_type'];
-  $varnish = "\nAdd Varnish?: " . $_POST['add_varnish'];
-  $logo =  "\nAdd Logo?: " . $_POST['add_logo'];
-  $message = "\nCustomer Message: " . $_POST['customer_message'];
-
-  $content = $name . $email . $size . $metal . $varnish .$logo . $message . "\n\nEnd of Order."; 
-
-  $headers = "From:" . $from;
-  mail($to,$subject,$content,$headers);
-  mail($email,$subject2,$content,$headers2); // sends a copy of the message to the sender
-  echo "Mail Sent. Thank you " . $name . ", we will contact you shortly.";
-}
-?> -->
+?>    
     <!DOCTYPE html>
     <html lang="en">
 
@@ -85,7 +55,7 @@ if (isset($_POST['submit'])){
     <!-- Fonts and icons -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="./assets/css/material-kit.css?v=2.0.0">
+    <link rel="stylesheet" href="../assets/css/material-kit.css?v=2.0.0">
     </head>
 
 
@@ -265,9 +235,9 @@ if (isset($_POST['submit'])){
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                        <input id="customer_name-name" class="form-control" name="full-name" type="text" placeholder="Full Name"
-                        class="input-xlarge">
-                        <p class="help-block"></p>
+                  <input id="customer_name" class="form-control" name="customer_name" type="text" placeholder="Full Name"
+                  class="input-xlarge">
+                  <p class="help-block"></p>
                 </div>
               </div>
               <div class="col-md-6">
@@ -278,7 +248,7 @@ if (isset($_POST['submit'])){
               <!-- address-line1 input-->
               <div class="col-md-6">
                 <div class="form-group">
-                        <input id="address-line1" class="form-control" name="address-line1" type="text" placeholder="Address Line 1"
+                        <input id="address_line1" class="form-control" name="address_line1" type="text" placeholder="Address Line 1"
                         class="input-xlarge">
                         <p class="help-block">Street address, P.O. box, company name, c/o</p>
                 </div>
@@ -286,7 +256,7 @@ if (isset($_POST['submit'])){
                 <!-- address-line2 input-->
                 <div class="col-md-6">
                 <div class="form-group">
-                        <input id="address-line2" class="form-control" name="address-line2" type="text" placeholder="Address Line 2" 
+                        <input id="address_line2" class="form-control" name="address_line2" type="text" placeholder="Address Line 2" 
                         class="input-xlarge">
                         <p class="help-block">Apartment, suite , unit, building, floor, etc.</p>
                 </div>
@@ -294,35 +264,35 @@ if (isset($_POST['submit'])){
                 <!-- city input-->
                 <div class="col-md-6">
                 <div class="form-group">
-                        <input id="city" class="form-control" name="city" type="text" placeholder="City / Town" class="input-xlarge">
-                        <p class="help-block"></p>
+                  <input id="city" class="form-control" name="city" type="text" placeholder="City / Town" class="input-xlarge">
+                  <p class="help-block"></p>
                 </div>
                 </div>
                 <!-- region input-->
                 <div class="col-md-6">
                 <div class="form-group">
-                        <input id="region" class="form-control" name="region" type="text" placeholder="Province / State / Region"
-                        class="input-xlarge">
-                        <p class="help-block"></p>
+                  <input id="region" class="form-control" name="region" type="text" placeholder="Province / State / Region"
+                  class="input-xlarge">
+                  <p class="help-block"></p>
                 </div>
                 </div>
                 <!-- postal-code input-->
                 <div class="col-md-6">
                 <div class="form-group">
-                        <input id="postal-code" class="form-control" name="postal-code" type="text" placeholder="Postal Code"
-                        class="input-xlarge">
-                        <p class="help-block"></p>
+                  <input id="postal_code" class="form-control" name="postal_code" type="text" placeholder="Postal Code"
+                  class="input-xlarge">
+                  <p class="help-block"></p>
                 </div>
                 </div>
                 <!-- country select -->
                 <div class="col-md-6">
                 <div class="form-group">
-                    <label class="form-label">Country</label>
-                        <select id="country" name="country" class="input-xlarge">
-                            <option value="" selected="selected">(please select a country)</option>
-                            <option value="CA">Canada</option>
-                            <option value="US">United States</option>
-                          </select>
+                  <label class="form-label">Country</label>
+                    <select id="country" name="country" class="input-xlarge">
+                      <option value="" selected="selected">(please select a country)</option>
+                      <option value="CA">Canada</option>
+                      <option value="US">United States</option>
+                    </select>
                 </div>
                 </div>
                 <div class="col-md-6">
