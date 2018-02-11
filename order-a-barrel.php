@@ -170,6 +170,8 @@ if (isset($_POST['submit'])){
                 <p>Choose to add a varnish to the inside of the barrel. This helps to extend the barrel&apos;s longevity.</p>
             </div>
           </div>
+          <!-- Upload picture for engraving
+
           <div class="col-md-3">
             <div class="info">
               <div class="icon icon-info">
@@ -178,7 +180,7 @@ if (isset($_POST['submit'])){
               <h4 class="info-title">4. Personal Touch</h4>
               <p>Upload a picture to have it engraved into your barrel.</p>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -216,14 +218,14 @@ if (isset($_POST['submit'])){
           <br>
           <hr>
         </fieldset>
-        <fieldset>
+        <!-- <fieldset>
           <legend>Add Custom Logo ($14) ?</legend>
             <input type="radio" name="add_logo" value="yes" required>Yes
             <input type="radio" name="add_logo" value="no" required>No
           <br>
           <br>
             <input id="form_button" type="file" name="custom_logo" accept="image/*">
-        </fieldset>
+        </fieldset> -->
       </div>
     <hr>
 
@@ -233,6 +235,7 @@ if (isset($_POST['submit'])){
     <h2 class="text-center title">Shipping Information</h2>
     <h4 class="text-center description">This information will be used to complete your order. We&apos;ve also provided a commentary box for any other comments or requests you may have.</h4>
             <div class="row">
+              <!-- Full Name input -->
               <div class="col-md-6">
                 <div class="form-group">
                   <input id="customer_name" class="form-control" name="customer_name" type="text" placeholder="Full Name"
@@ -240,6 +243,7 @@ if (isset($_POST['submit'])){
                   <p class="help-block"></p>
                 </div>
               </div>
+              <!-- Email input -->
               <div class="col-md-6">
                 <div class="form-group">
                 <input type="email" class="form-control" id="customer_email" placeholder="Email Address" required>
