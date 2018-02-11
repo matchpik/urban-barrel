@@ -11,7 +11,7 @@
 if (isset($_POST['submit'])){
   $to = "mattbbwhite@gmail.com";
   $from = "Urban Barrel Site";
-  $name = $_POST['customer_name'];
+  $name = "Customer name: " . $_POST['customer_name'];
   $email = $_POST['customer_email'];
   $subject = "Order Request from " . $name;
   $subject2 = "Copy of your recent Urban Barrel order.";
@@ -19,13 +19,13 @@ if (isset($_POST['submit'])){
   $headers2 = "From: " . $to;
 
   //Order specs
-  $size = $_POST['barrel_size'];
-  $metal = $_POST['hoop_type'];
-  $varnish = $_POST['add_varnish'];
-  $logo = $_POST['add_logo'];
-  $message = $_POST['customer_message'];
+  $size = "Barrel Size: " . $_POST['barrel_size'];
+  $metal = "\nHoop Style: " . $_POST['hoop_type'];
+  $varnish = "\nAdd Varnish?: " . $_POST['add_varnish'];
+  $logo =  "\nAdd Logo?: " . $_POST['add_logo'];
+  $message = "\nCustomer Message: " . $_POST['customer_message'];
 
-  $content = "Customer name: " . $name . "\nCustomer Email Address: " . $email . "\nBarrel Size: " . $size . "\nHoop Style: " . $metal . "\nAdd Varnish?: " . $varnish . "\nAdd Logo?: " . $logo . "\nCustomer Message: " . $message . "\n\nEnd of Order."; 
+  $content = $name . $email . $size . $metal . $varnish .$logo . $message . "\n\nEnd of Order."; 
 
   $headers = "From:" . $from;
   mail($to,$subject,$content,$headers);
@@ -142,7 +142,7 @@ if (isset($_POST['submit'])){
           <div class="col-md-3">
             <div class="info">
               <div class="icon icon-info">
-                <i class="material-icons">chat</i>
+                <i class="material-icons">format size</i>
               </div>
               <h4 class="info-title">1. Size</h4>
               <p>Barrels are measured in litres and range from 1 to 5 litres in volume.</p>
@@ -160,7 +160,7 @@ if (isset($_POST['submit'])){
           <div class="col-md-3">
             <div class="info">
               <div class="icon icon-danger">
-                <i class="material-icons">fingerprint</i>
+                <i class="material-icons">all out</i>
               </div>
                 <h4 class="info-title">3. Varnish</h4>
                 <p>Choose to add a varnish to the inside of the barrel. This helps to extend the barrel&apos;s longevity.</p>
@@ -169,7 +169,7 @@ if (isset($_POST['submit'])){
           <div class="col-md-3">
             <div class="info">
               <div class="icon icon-danger">
-                <i class="material-icons">fingerprint</i>
+                <i class="material-icons">photo size select actual</i>
               </div>
                 <h4 class="info-title">4. Personal Touch</h4>
                 <p>Upload a picture to have it engraved into the rounded face of the barrel.</p>
