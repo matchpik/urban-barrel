@@ -87,7 +87,7 @@
 	                            <img src="../assets/img/faces/logo.jpg" alt="Circle Image" class="img-raised rounded-circle img-fluid">
 	                        </div>
 	                        <div class="name">
-	                            <h3 class="title">Take care of your barrel so your barrel can take care of you</h3>					
+	                            <h3 class="title">Take care of your barrel &lt;3</h3>					
 								          </div>
 	                    </div>
                 
@@ -104,17 +104,18 @@
             <div class="profile-tabs">
               <ul class="nav nav-pills nav-pills-warning nav-pills-icons justify-content-center" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#woods" role="tab" data-toggle="tab">
+                    <a class="nav-link active" href="#instructions" role="tab" data-toggle="tab">
                       <i class="material-icons">camera</i>
-                      Wood
+                      Instrcutions
                     </a>
+
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="#metals" role="tab" data-toggle="tab">
                       <i class="material-icons">timeline</i>
                         Metals
                     </a>
-                </li>
+                </li> -->
                 <!-- <li class="nav-item">
                     <a class="nav-link" href="#barrels" role="tab" data-toggle="tab">
                       <i class="material-icons">favorite</i>
@@ -127,10 +128,14 @@
         </div>
         
           <div class="tab-content tab-space">
-            <div class="tab-pane active text-center gallery" id="woods">
+            <div class="tab-pane active text-center gallery" id="instructions">
   						<div class="row">
   							<div class="col-md-3 ml-auto">
-  								<img src="../assets/img/materials/whiteoak1.jpg" class="rounded">
+                  <!-- pop up window for instructions -->
+  								<img src="../assets/img/instructions.jpg"
+                        width="660" height="225" alt="printable instructions"
+                        onclick="instructions = window.open('../assets/img/instructions.jpg');
+                            instructions.print();">
   							</div>
   							<div class="col-md-3 mr-auto">
   								<img src="../assets/img/materials/whiteoakbarrel.jpg" class="rounded">
