@@ -136,11 +136,35 @@ if (isset($_POST['submit'])){
     <div class="section text-center">
     <div class="row">
     <div class="col-md-8 ml-auto mr-auto">
-    <h2 class="title">Create A Custom Barrel</h2>
+    <h2 class="title">Order A Custom Barrel</h2>
     <h4 class="title">For Yourself Or A Loved One</h4>
     <br>
-    <h5 class="description">Flow through the list and select the options that you deem appropriate.
-    When you&apos;re done, click the confirm order button. You will be prompted to double-check and then re-confirm your order, after which you will be taken to checkout.</h5>
+
+    <div class="section text-center">
+    <div class="col-md-12">
+    <div class="form-group">
+      <h5 class="description">Select your barrel from the dropdown menu and indicate your metal preference in the description box that follows.<br> You may also indicate any other requests you have.</h5>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="DYMK96RVXNNU6">
+          <table align="center">
+            <tr><td><input type="hidden" name="on0" value="Sizes">Click here for dropdown menu</td></tr><tr><td><select name="os0">
+              <option value="1L"> 1L $60.00 CAD</option>
+              <option value="2L"> 2L $80.00 CAD</option>
+              <option value="3L"> 3L $95.00 CAD</option>
+              <option value="5L"> 5L $125.00 CAD</option>
+              <option value="10L"> 10L $150.00 CAD</option>
+              <option value="20L"> 20L $175.00 CAD</option>
+            </select> </td></tr>
+          </table>
+        <input type="hidden" name="currency_code" value="CAD">
+        <p><br></p>
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+      </form>
+    </div>
+    </div>
+    </div>
     </div>
     </div>
       <div class="features">
@@ -151,7 +175,7 @@ if (isset($_POST['submit'])){
                 <i class="material-icons">camera</i>
               </div>
               <h4 class="info-title">1. Size</h4>
-              <p>Barrels are measured in litres and range from 1 to 5 litres in volume.</p>
+              <p>Barrels are measured in litres and are offered in denominations of 1, 2, 3, 5, 10 and 20 litres.</p>
             </div>
           </div>
           <div class="col-md-6">
@@ -353,31 +377,7 @@ if (isset($_POST['submit'])){
       }
     }, '#paypal-button');
   </script> -->
-  <div class="section text-center">
-  <div class="col-md-12">
-  <div class="form-group">
-    <h5 class="description">Select your barrel from the dropdown menu and indicate your metal preference in the description box that follows.<br> You may also indicate any other requests you have.</h5>
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-      <input type="hidden" name="cmd" value="_s-xclick">
-      <input type="hidden" name="hosted_button_id" value="DYMK96RVXNNU6">
-        <table align="center">
-          <tr><td><input type="hidden" name="on0" value="Sizes">Click here for dropdown menu</td></tr><tr><td><select name="os0">
-            <option value="1L"> 1L $60.00 CAD</option>
-            <option value="2L"> 2L $80.00 CAD</option>
-            <option value="3L"> 3L $95.00 CAD</option>
-            <option value="5L"> 5L $125.00 CAD</option>
-            <option value="10L"> 10L $150.00 CAD</option>
-            <option value="20L"> 20L $175.00 CAD</option>
-          </select> </td></tr>
-        </table>
-      <input type="hidden" name="currency_code" value="CAD">
-      <p><br></p>
-      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-      <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-    </form>
-  </div>
-  </div>
-  </div>
+
 </div>
 </div>
 
