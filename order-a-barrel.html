@@ -25,7 +25,7 @@
     <!-- Fonts and icons -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="./assets/css/material-kit.css?v=2.0.0">
+    <link rel="stylesheet" href="../assets/css/material-kit.css?v=2.0.0">
     <!-- PayPal -->
     <script src="https://www.paypalobjects.com/api/checkout.js"></script>
     </head>
@@ -105,197 +105,9 @@
                 <p>Metal refers to the material of the barrel&apos;s rings. The options are galvanized steel, black steel, or brass.</p>
             </div>
           </div>
-          <!--
-          <div class="col-md-4">
-            <div class="info">
-              <div class="icon icon-danger">
-                <i class="material-icons">book</i>
-              </div>
-                <h4 class="info-title">3. Varnish</h4>
-                <p>Choose to add a varnish to the inside of the barrel. This helps to extend the barrel&apos;s longevity.</p>
-            </div>
-          </div>
-          Upload picture for engraving
-
-          <div class="col-md-3">
-            <div class="info">
-              <div class="icon icon-info">
-                <i class="material-icons">camera</i>
-              </div>
-              <h4 class="info-title">4. Personal Touch</h4>
-              <p>Upload a picture to have it engraved into your barrel.</p>
-            </div>
-          </div> -->
         </div>
       </div>
     </div>
-
-
-<!--Order Form begins 
-
-    <div class="section text-center">
-      <h2 class="title">Order Form</h2>
-      <hr>
-    <form  method="POST" action="order-a-barrel.php" id="barrel_order_form">
-      <div class="form-radio">
-        <fieldset>
-          <legend>Barrel Size (Litres)</legend>
-            <input type="radio" name="barrel_size" value="1L" required>1L
-            <input type="radio" name="barrel_size" value="2L" required>2L
-            <input type="radio" name="barrel_size" value="3L" required>3L
-            <input type="radio" name="barrel_size" value="4L" required>4L
-            <input type="radio" name="barrel_size" value="5L" required>5L
-          <br>
-          <hr>
-        </fieldset>
-        <fieldset>
-          <legend>Hoop Style</legend>
-            <input type="radio" name="hoop_type" value="black_steele" required>Black Steel
-            <input type="radio" name="hoop_type" value="brass" required>Brass
-            <input type="radio" name="hoop_type" value="galvanized" required>Galvanized Steel
-          <br>
-          <hr>
-        </fieldset>
-        <fieldset>
-          <legend>Add Varnish ($8) ?</legend>
-            <input type="radio" name="add_varnish" value="yes" required>Yes
-            <input type="radio" name="add_varnish" value="no" required>No
-          <br>
-          <hr>
-        </fieldset>
-        <fieldset>
-          <legend>Add Custom Logo ($14) ?</legend>
-            <input type="radio" name="add_logo" value="yes" required>Yes
-            <input type="radio" name="add_logo" value="no" required>No
-          <br>
-          <br>
-            <input id="form_button" type="file" name="custom_logo" accept="image/*">
-        </fieldset>
-        <hr>
-      </div>
-
-    <div class="section section-contacts">
-    <div class="row">
-    <div class="col-md-8 ml-auto mr-auto">
-    <h2 class="text-center title">Shipping Information</h2>
-    <h4 class="text-center description">This information will be used to complete your order. We&apos;ve also provided a commentary box for any other comments or requests you may have.</h4>
-            <div class="row">
-             
-              <div class="col-md-6">
-                <div class="form-group">
-                  <input id="customer_name" class="form-control" name="customer_name" type="text" placeholder="Full Name"
-                  class="input-xlarge" required>
-                  <p class="help-block"></p>
-                </div>
-              </div>
-              
-              <div class="col-md-6">
-                <div class="form-group">
-                <input type="email" class="form-control" id="customer_email" placeholder="Email Address" required>
-                </div>
-              </div>
-              
-              <div class="col-md-6">
-                <div class="form-group">
-                        <input id="address_line1" class="form-control" name="address_line1" type="text" placeholder="Address Line 1"
-                        class="input-xlarge" required>
-                        <p class="help-block">Street address, P.O. box, company name, c/o</p>
-                </div>
-              </div>
-                
-                <div class="col-md-6">
-                <div class="form-group">
-                        <input id="address_line2" class="form-control" name="address_line2" type="text" placeholder="Address Line 2" 
-                        class="input-xlarge">
-                        <p class="help-block">Apartment, suite , unit, building, floor, etc.</p>
-                </div>
-                </div>
-                
-                <div class="col-md-6">
-                <div class="form-group">
-                  <input id="city" class="form-control" name="city" type="text" placeholder="City / Town" class="input-xlarge" required>
-                  <p class="help-block"></p>
-                </div>
-                </div>
-                
-                <div class="col-md-6">
-                <div class="form-group">
-                  <input id="region" class="form-control" name="region" type="text" placeholder="Province / State / Region"
-                  class="input-xlarge" required>
-                  <p class="help-block"></p>
-                </div>
-                </div>
-               
-                <div class="col-md-6">
-                <div class="form-group">
-                  <input id="postal_code" class="form-control" name="postal_code" type="text" placeholder="Postal Code"
-                  class="input-xlarge" required>
-                  <p class="help-block"></p>
-                </div>
-                </div>
-                
-                <div class="col-md-6">
-                <div class="form-group">
-                  <label class="form-label">Country</label>
-                    <select id="country" name="country" class="input-xlarge" required>
-                      <option value="" selected="selected">(please select a country)</option>
-                      <option value="CA">Canada</option>
-                      <option value="US">United States</option>
-                    </select>
-                </div>
-                </div>
-                <div class="col-md-6">
-                <div class="form-group">
-                  <textarea type="text" class="form-control" placeholder="Your Message" rows="4" id="customer_message"></textarea>
-                </div>
-                </div>
-            <div class="row">
-              <div class="col-md-4 ml-auto mr-auto text-center"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <button type="submit" class="btn btn-default">Confirm Order</button>
-    </form>
-    <div id="paypal-button"></div> -->
-
-  <!-- <script>
-    paypal.Button.render({
-      env: 'production', // Or 'sandbox',
-
-      commit: true, // Show a 'Pay Now' button
-
-      style: {
-        color: 'gold',
-        size: 'small'
-      },
-
-      payment: function(data, actions) {
-        /* 
-         * Set up the payment here 
-         */
-      },
-
-      onAuthorize: function(data, actions) {
-        /* 
-         * Execute the payment here 
-         */
-      },
-
-      onCancel: function(data, actions) {
-        /* 
-         * Buyer cancelled the payment 
-         */
-      },
-
-      onError: function(err) {
-        /* 
-         * An error occurred during the transaction 
-         */
-      }
-    }, '#paypal-button');
-  </script> -->
-
 </div>
 </div>
 
@@ -304,7 +116,7 @@
 <footer class="footer ">    
   <div class="container">
     <div class="copyright pull-left">
-     &copy; <script>document.write(new Date().getFullYear())</script>, Urban Barrel Company
+     &copy; <script>document.write(new Date().getFullYear())</script>, <a href="index.html" style="text-decoration: none; ">Urban Barrel Company</a>
     </div>
     <nav class="pull-right">
       <ul>
