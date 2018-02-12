@@ -5,38 +5,8 @@
     1. Website should be user friendly and user should land on a buying page.
     2. User can place order directly on site.
     3. User can see products immediately.
-    4. Minimal navigation necessary on user's behalf.
+    4. Minimal navigation necessary on user's behalf. -->
  
-<?php 
-if (isset($_POST['submit'])){
-  // Company info
-  $to = "mattbbwhite@gmail.com";
-  $from = "Urban Barrel Site";
-
-  //Order info
-  $size = "\nBarrel Size: " . $_POST['barrel_size'];
-  $metal = "\nHoop Style: " . $_POST['hoop_type'];
-  $varnish = "\nAdd Varnish?: " . $_POST['add_varnish'];
-  $logo =  "\nAdd Logo?: " . $_POST['add_logo'];
-  $message = "\nCustomer Message: " . $_POST['customer_message'];
-
-  // Shipping Info
-  $customer_name = "\n" . $_POST['customer_name'];
-  $customer_email = "\n" . $_POST['customer_email'];
-  $address_1 = "\n" . $_POST['address_line1'];
-  $address_2 = "\n" . $_POST['address_line2'];
-  $city = "\n" . $_POST['city'];
-  $region = "\n" . $_POST['region'];
-  $country = "\n" . $_POST['country'];
-
-  // Email Content
-  $content = $customer_name . $customer_email . $size . $metal . $varnish .$logo . $message . "\n\nShipping info: " . $address_1 . $address_2 . $city . $region . $country . "\n\nEnd Of Order"; 
-
-  $headers = "From:" . $from;
-  mail($to,$subject,$content,$headers);
-  mail($email,$subject2,$content,$headers2); // sends a copy of the message to the sender
-}
-?>   --> 
     <!DOCTYPE html>
     <html lang="en">
 
@@ -55,71 +25,13 @@ if (isset($_POST['submit'])){
     <!-- Fonts and icons -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="../assets/css/material-kit.css?v=2.0.0">
+    <link rel="stylesheet" href="./assets/css/material-kit.css?v=2.0.0">
     <!-- PayPal -->
     <script src="https://www.paypalobjects.com/api/checkout.js"></script>
     </head>
 
-
     <body class="landing-page ">
-    <nav class="navbar navbar-color-on-scroll navbar-transparent fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
-      <div class="container">
-        <div class="navbar-translate">
-          <a class="navbar-brand" href="index.html">Urban Barrel Company</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            <span class="navbar-toggler-icon"></span>
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-        <div class="collapse navbar-collapse">
-          <ul class="navbar-nav ml-auto">
-            <li class="dropdown nav-item">
-            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-            <i class="material-icons">apps</i> About
-            </a>
-            <div class="dropdown-menu dropdown-with-icons">
-            <a href="index.html" class="dropdown-item">
-            <i class="material-icons">layers</i> The Product
-            </a>
-
-            <a href="packages.html" class="dropdown-item">
-            <i class="material-icons">layers</i> The Packages
-            </a>
-            <hr>
-            <a href="materials.html" class="dropdown-item">
-            <i class="material-icons">layers</i> The Materials
-            </a>
-
-            <a href="maintenance.html" class="dropdown-item">
-            <i class="material-icons">layers</i> The Maintenance
-            </a>
-            </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://twitter.com/urban_barchef" target="_blank" data-original-title="Follow us on Twitter">
-              <i class="fa fa-twitter"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.facebook.com/Otownbarrels" target="_blank" data-original-title="Like us on Facebook">
-              <i class="fa fa-facebook-square"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.instagram.com/UrbanBarChef" target="_blank" data-original-title="Follow us on Instagram">
-              <i class="fa fa-instagram"></i>
-              </a>
-            </li>  
-            </ul>
-        </div>
-      </div>
-    </nav>
-
-
-
-
-    <div class="page-header header-filter" data-parallax="true" style=" background-image: url('../assets/img/backgrounds/speakeasy_bar.jpg'); ">
+    <div class="header-filter" data-parallax="true" style=" background-image: url('../assets/img/backgrounds/speakeasy_bar.jpg'); ">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
@@ -143,7 +55,7 @@ if (isset($_POST['submit'])){
                   <input type="hidden" name="cmd" value="_s-xclick">
                   <input type="hidden" name="hosted_button_id" value="2Q2Y4T97BW2H2">
                     <table align="center">
-                      <tr><td><input type="hidden" name="on0" value="Select your barrel's size below">Select your barrel's size below</td></tr><tr><td>
+                      <tr><td><input type="hidden" name="on0" value="Select your barrel's size below">Pick your barrel's size</td></tr><tr><td>
                         <select name="os0">
                           <option value="1 Litre Barrel">1 Litre Barrel $74.00 CAD</option>
                           <option value="2 Litre Barrel">2 Litre Barrel $92.00 CAD</option>
@@ -152,7 +64,7 @@ if (isset($_POST['submit'])){
                           <option value="10 Litre Barrel">10 Litre Barrel $152.00 CAD</option>
                           <option value="20 Litre Barrel">20 Litre Barrel $196.00 CAD</option>
                         </select> </td></tr>
-                      <tr><td><input type="hidden" name="on1" value="Select your barrel's metal below">Select your barrel's metal below</td></tr><tr><td>
+                      <tr><td><input type="hidden" name="on1" value="Select your barrel's metal below">Pick your barrel's metal</td></tr><tr><td>
                         <select name="os1">
                           <option value="Black Steel">Black Steel </option>
                           <option value="Galvanized Steel">Galvanized Steel </option>
@@ -182,9 +94,6 @@ if (isset($_POST['submit'])){
                   <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
                   <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
                 </form>
-
-
-                <h5 class="description">Select your barrel from the dropdown menu and indicate your metal preference in the description box that follows.<br> You may also indicate any other requests you have.</h5>
           </div>
         </div>
       </div>
@@ -205,7 +114,7 @@ if (isset($_POST['submit'])){
                 <i class="material-icons">verified_user</i>
               </div>
                 <h4 class="info-title">2. Metal</h4>
-                <p>Metal refers to the material of the barrel&apos;s rings. The options are galvanized steel, black steel, or brass. Indicate your choice in the Description section of the paypal checkout.</p>
+                <p>Metal refers to the material of the barrel&apos;s rings. The options are galvanized steel, black steel, or brass.</p>
             </div>
           </div>
           <!--
