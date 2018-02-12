@@ -96,7 +96,7 @@
 
                 <div class="description text-center" id="product">
                     <h5 class="description">Click on the sheet to enlarge and print.<br>
-                        Print a hard copy or as a PDF and save it directly to your computer for future reference.
+                        Print a hard copy or print as a PDF and save it directly to your computer for future reference.
                     </h5>
                 </div>
 
@@ -106,7 +106,8 @@
               <ul class="nav nav-pills nav-pills-warning nav-pills-icons justify-content-center" role="tablist">
                 <li class="nav-item">
                     <a class="nav-link active" href="#instructions" role="tab" data-toggle="tab">
-                      <i class="material-icons">camera</i>
+                      <i class="material-icons" onclick="instructions = window.open('../assets/img/instructions.jpg');
+                            instructions.print();">camera</i>
                       Instructions
                     </a>
                 </li>
