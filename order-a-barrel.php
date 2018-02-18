@@ -92,6 +92,10 @@ if (isset($_POST['submit'])){
             <a href="#" class="dropdown-item">
             <i class="material-icons">layers</i> The Maintenance
             </a>
+            <hr>
+            <a href="gallery.html" class="dropdown-item">
+                <i class="material-icons">layers</i> The Gallery
+            </a>
             </div>
             </li>
             <li class="nav-item">
