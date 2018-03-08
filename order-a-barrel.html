@@ -41,6 +41,7 @@
           <h4 class="title">For Yourself Or A Loved One</h4>
               <div class="form-group">
                 <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
+                  <!--Barrels -->
                   <input type="hidden" name="cmd" value="_s-xclick">
                     <input type="hidden" name="on0" value="Pick Your Barrel">Pick Your Barrel
                     <select name="os0">
@@ -55,12 +56,16 @@
                       <option value="10 Litre - Varnish Included">10 Litre - Varnish Included $172.00 CAD</option>
                       <option value="20 Litre - Varnish Included">20 Litre - Varnish Included $217.00 CAD</option>
                     </select>
+                    <br>
+                    <!--Rings -->
                     <input type="hidden" name="on1" value="Ring metal">Ring metal
                     <select name="os1">
                       <option value="Black Steel">Black Steel </option>
                       <option value="Brass">Brass </option>
                       <option value="Galvanized Steel">Galvanized Steel </option>
                     </select>
+                    <br>
+                    <!-- Add to Cart button -->
                   <input type="hidden" name="currency_code" value="CAD">
                   <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIKEQYJKoZIhvcNAQcEoIIKAjCCCf4CAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYAxyl3O6/xg6JEJHf5s/rfv8Ne/Aq6bitCujnoYOpC6JrFqEEafr8z6hNdbHpe8nhHjHnR+sJuKUACHMLqYwfipR+rSh0c+7IwQcjCZ+XBszwXwHkuODjR3Tb6tTt91kme2xAfcw6uFjWxnyOIQ65PFojZ+SYBtmPC6gHhwwwYojTELMAkGBSsOAwIaBQAwggONBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECMUiJA++ahYqgIIDaNC2yQQ7g5sYs24DXWnwlp6xRg+WyuA2BEEJhJ91UKc+8uCIWzUxhj/AA7hyMGRagslSOtQpSeWgISsBWcl9bBEddmBMu+iHdi/Cxgz+Yi261wZzfGYrp5C6o6TAUeIEuWMqxJ9p81Xd83h7NBUVthES4ETHhc7O9qsc1X8wRpzBN61IPpJO7Julpc2wtMWTp5xMzODzw61ptHmKpc2TfpWmlpvXNMETkDBWrDkXV9TPe0OOmylpMNDXvVGKMIFBOZfIddqidC9zaCtTurh5dLHF3h/3wgqjGeZcf9Szyy623R4dvlAebrr9qPMQx2HsJQhW4ey9yQdWaKCJWA/CFd16kwGGQekS1oy/+A0oG5i6cj2hHmX6PkiINlXvGnwzBvsKT2c5nrRwHmFqpGOrnEaN1a1PQ9hhaKjNR3HGPOIOiXt4JwnOWn+5otfUJcb58N2XtcHZKIHi2TVJ5M8vlVjuVOZFAz6+vjHN2cmhRAKyAfWJx4w5eEsyuowKEnvgfFZAXbFHKzDnpzdtme2ZjpT3TEpcl/mfYhn5rKqWhy+BjEZnuu2lh9lAfitvCTFzPrjW3jxJ+NOn340ehu+0CYf6Yug6+PXmvC1eZ8thpHP2wIpOCQ5xnGHC0lbrfzNZf1cw+7R+euBweKqINWdcSa9kLKA7Dh5pTE61WlABZZH6ERHW02X1tUtO4mezsZQDVm37jqofQFKH71WP0z181cfgImPmDdTWkQoA7NFcUY6qAN8t+9riDuxyfeA1mqZ+eX9Ke7eWWwV2f5S2RST+WnSBb/jzYHixCx48SNS9Y0y/uDgFDuC4O2kS1DuzcN/c/vSN5ZDLmk6jIw4WU9oMEEjbFHd4F9mFSpjsIfQbDbLYW1qBAq6pJgrfqxc4ifduBcvOeF9xFnudsUPPB2GkCuxvDY/+18lP+1BSnaqi37oAQBx2Jq0qcGlPbAomNjAkmk+tFo5/5tqpBPxspzEiXmQe61wuPNAqErogxPIPr/IHEuo+n0p71B/8MjxWZHEsfsjwsMMxmk2ujwsTDAQ1ktJJIvYUS0q6SgtUG1fRQVEtzul0Q9MRiw/N5ZrrzOS/wWHE8wiHcExvFL+ACxb2pM4B+7E2C0bEGXpN0lz2zneVFKdJoH9KbHcEOHX/A6PwiEOSgS37A2SFoIIDhzCCA4MwggLsoAMCAQICAQAwDQYJKoZIhvcNAQEFBQAwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tMB4XDTA0MDIxMzEwMTMxNVoXDTM1MDIxMzEwMTMxNVowgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDBR07d/ETMS1ycjtkpkvjXZe9k+6CieLuLsPumsJ7QC1odNz3sJiCbs2wC0nLE0uLGaEtXynIgRqIddYCHx88pb5HTXv4SZeuv0Rqq4+axW9PLAAATU8w04qqjaSXgbGLP3NmohqM6bV9kZZwZLR/klDaQGo1u9uDb9lr4Yn+rBQIDAQABo4HuMIHrMB0GA1UdDgQWBBSWn3y7xm8XvVk/UtcKG+wQ1mSUazCBuwYDVR0jBIGzMIGwgBSWn3y7xm8XvVk/UtcKG+wQ1mSUa6GBlKSBkTCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb22CAQAwDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQUFAAOBgQCBXzpWmoBa5e9fo6ujionW1hUhPkOBakTr3YCDjbYfvJEiv/2P+IobhOGJr85+XHhN0v4gUkEDI8r2/rNk1m0GA8HKddvTjyGw/XqXa+LSTlDYkqI8OwR8GEYj4efEtcRpRYBxV8KxAW93YDWzFGvruKnnLbDAF6VR5w/cCMn5hzGCAZowggGWAgEBMIGUMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbQIBADAJBgUrDgMCGgUAoF0wGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG9w0BCQUxDxcNMTgwMzA4MDE0ODU5WjAjBgkqhkiG9w0BCQQxFgQUbXEv0pOUH1QT3DaxxlcxvwmmQGUwDQYJKoZIhvcNAQEBBQAEgYCSRs/6/1AfdqRnWufP01vHCYg+QVnQ9jCg5QJPZuNISyoymRhO0OqKW4Sv11bfxGuVbEmOFlGFQiIV1BWxBzuPDM90NKEEKSBQb5h/NT0yaUFQfWf7gZipHQw/GXObPg6auxQIHy0pfHrfhDVW0pXcrywCNjJRokMve96lUCEevg==-----END PKCS7-----
                   ">
