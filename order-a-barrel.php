@@ -78,23 +78,23 @@ if (isset($_POST['submit'])){
             </a>
             <div class="dropdown-menu dropdown-with-icons">
             <a href="index.html" class="dropdown-item">
-            <i class="material-icons">layers</i> The Product
+            <i class="material-icons">layers</i>Product
             </a>
 
             <a href="#" class="dropdown-item">
-            <i class="material-icons">layers</i> The Packages
+            <i class="material-icons">layers</i>Packages
             </a>
             <hr>
             <a href="#" class="dropdown-item">
-            <i class="material-icons">layers</i> The Materials
+            <i class="material-icons">layers</i>Materials
             </a>
 
             <a href="#" class="dropdown-item">
-            <i class="material-icons">layers</i> The Maintenance
+            <i class="material-icons">layers</i>Maintenance
             </a>
             <hr>
             <a href="gallery.html" class="dropdown-item">
-                <i class="material-icons">layers</i> The Gallery
+                <i class="material-icons">layers</i>Gallery
             </a>
             </div>
             </li>
@@ -141,8 +141,8 @@ if (isset($_POST['submit'])){
     <h2 class="title">Create A Custom Barrel</h2>
     <h4 class="title">For Yourself Or A Loved One</h4>
     <br>
-    <h5 class="description">Flow through the list and select the options that you deem appropriate.
-    When you&apos;re done, click the confirm order button. You will be prompted to double-check and then re-confirm your order, after which you will be taken to checkout.</h5>
+    <h5 class="description">Flow through the list and select the desired options.
+    When you&apos;re done, click the &apos;confirm order&apos; button. You will be prompted to double-check and then re-confirm your order, after which you will be taken to checkout.</h5>
     </div>
     </div>
       <div class="features">
@@ -153,7 +153,7 @@ if (isset($_POST['submit'])){
                 <i class="material-icons">camera</i>
               </div>
               <h4 class="info-title">1. Size</h4>
-              <p>Barrels are measured in litres and range from 1 to 5 litres in volume.</p>
+              <p>Barrels are measured in litres and range from 1 to 20 litres in volume.</p>
             </div>
           </div>
           <div class="col-md-4">
@@ -162,7 +162,7 @@ if (isset($_POST['submit'])){
                 <i class="material-icons">verified_user</i>
               </div>
                 <h4 class="info-title">2. Metal</h4>
-                <p>Metal refers to the material of the barrel&apos;s rings. The options are galvanized steel, black steel, or brass.</p>
+                <p>Metal refers to the material of the barrel&apos;s rings. The options are galvanized steel, black steel or brass.</p>
             </div>
           </div>
           <div class="col-md-4">
@@ -174,8 +174,6 @@ if (isset($_POST['submit'])){
                 <p>Choose to add a varnish to the inside of the barrel. This helps to extend the barrel&apos;s longevity.</p>
             </div>
           </div>
-          <!-- Upload picture for engraving
-
           <div class="col-md-3">
             <div class="info">
               <div class="icon icon-info">
@@ -184,7 +182,7 @@ if (isset($_POST['submit'])){
               <h4 class="info-title">4. Personal Touch</h4>
               <p>Upload a picture to have it engraved into your barrel.</p>
             </div>
-          </div> -->
+          </div>
         </div>
       </div>
     </div>
@@ -201,9 +199,9 @@ if (isset($_POST['submit'])){
           <legend>Barrel Size (Litres)</legend>
             <input type="radio" name="barrel_size" value="1L" required>1L
             <input type="radio" name="barrel_size" value="2L" required>2L
-            <input type="radio" name="barrel_size" value="3L" required>3L
-            <input type="radio" name="barrel_size" value="4L" required>4L
             <input type="radio" name="barrel_size" value="5L" required>5L
+            <input type="radio" name="barrel_size" value="10L" required>10L
+            <input type="radio" name="barrel_size" value="20L" required>20L
           <br>
           <hr>
         </fieldset>
@@ -222,7 +220,7 @@ if (isset($_POST['submit'])){
           <br>
           <hr>
         </fieldset>
-        <!-- <fieldset>
+        <fieldset>
           <legend>Add Custom Logo ($14) ?</legend>
             <input type="radio" name="add_logo" value="yes" required>Yes
             <input type="radio" name="add_logo" value="no" required>No
@@ -230,7 +228,7 @@ if (isset($_POST['submit'])){
           <br>
             <input id="form_button" type="file" name="custom_logo" accept="image/*">
           <hr>
-        </fieldset> -->
+        </fieldset>
       </div>
 
     <div class="section section-contacts">
@@ -330,8 +328,8 @@ if (isset($_POST['submit'])){
     <nav class="pull-right">
       <ul>
         <li>
-          <a href="https://www.urbanbarchef.com">
-            Urban Barchef
+          <a href="index.html">
+            Urban Barrel Company
           </a>
         </li>
       </ul>
