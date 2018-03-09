@@ -54,7 +54,7 @@ body {
     font-size: 1rem;
     font-weight: normal;
     line-height: 1.5;
-    color: #212529;
+    color: #020202;
     text-align: left;
     background-color: #fafafa;
 }
@@ -77,11 +77,13 @@ h5,
 h6 {
     margin-top: 0;
     margin-bottom: .5rem;
+    color: #020202;
 }
 
 p {
     margin-top: 0;
     margin-bottom: 1rem;
+    color: #020202;
 }
 
 abbr[title],
@@ -13842,7 +13844,7 @@ h2.title {
 .description,
 .card-description,
 .footer-big p {
-    color: #999;
+    color: #020202;;
 }
 
 .text-warning {
@@ -13966,12 +13968,12 @@ h2.title {
 
 .nav-tabs .nav-link.active {
     color: rgba(0, 0, 0, 0.87);
-    border-color: #9c27b0;
+    border-color: #ff9800;
 }
 
-.nav-tabs .nav-link.active:focus,
+.tabs .nav-link.active:focus,
 .nav-tabs .nav-link.active:hover {
-    border-color: #9c27b0;
+    border-color: #ff9800;
 }
 
 .nav-tabs .nav-link.disabled {
@@ -14414,9 +14416,9 @@ h2.title {
 .dropdown-menu a:hover,
 .dropdown-menu a:focus,
 .dropdown-menu a:active {
-    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(156, 39, 176, 0.4);
-    background-color: #9c27b0;
-    color: #FFFFFF;
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(255, 152, 0, 0.4);
+    background-color: #ff9800;
+    color: white;
 }
 
 .dropdown-toggle.bmd-btn-icon::after,
