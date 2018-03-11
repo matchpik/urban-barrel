@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+		img.bg {
+		  /* Set rules to fill background */
+		  min-height: 100%;
+		  min-width: 1024px;
+			
+		  /* Set up proportionate scaling */
+		  width: 100%;
+		  height: auto;
+			
+		  /* Set up positioning */
+		  position: fixed;
+		  top: 0;
+		  left: 0;
+		}
+
+		@media screen and (max-width: 1024px) { /* Specific to this particular image */
+		  img.bg {
+		    left: 50%;
+		    margin-left: -512px;   /* 50% */
+		  }
+		}
+	</style>
+	<title>Urban Barrel - Coming Soon!</title>
+</head>
+<body>
+
+	<img src="coming_soon.jpg" alt="Website Coming Soon" class="bg">
+
+</body>
+</html>
