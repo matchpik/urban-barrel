@@ -35,93 +35,13 @@ if (isset($_POST['submit'])){
   $headers = "From:" . $from;
   mail($to,$subject,$content,$headers);
   mail($email,$subject2,$content,$headers2); // sends a copy of the message to the sender
-}
-?>    
-    <!DOCTYPE html>
-    <html lang="en">
-
-    <head>
-
-    <title>
-    Urban Barrel Company
-    </title>
-
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" href="../assets/img/apple-icon.png">
-    <link rel="icon" href="../assets/img/favicon.png">
-    <!-- Fonts and icons -->
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="../assets/css/material-kit.css?v=2.0.0">
-    </head>
-
-
-    <body class="landing-page ">
-    <nav class="navbar navbar-color-on-scroll navbar-transparent fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
-      <div class="container">
-        <div class="navbar-translate">
-          <a class="navbar-brand" href="index.html">Urban Barrel Company</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            <span class="navbar-toggler-icon"></span>
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-        <div class="collapse navbar-collapse">
-          <ul class="navbar-nav ml-auto">
-            <li class="dropdown nav-item">
-            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-            <i class="material-icons">apps</i> About
-            </a>
-            <div class="dropdown-menu dropdown-with-icons">
-            <a href="index.html" class="dropdown-item">
-            <i class="material-icons">layers</i>Product
-            </a>
-
-            <a href="#" class="dropdown-item">
-            <i class="material-icons">layers</i>Packages
-            </a>
-            <hr>
-            <a href="#" class="dropdown-item">
-            <i class="material-icons">layers</i>Materials
-            </a>
-
-            <a href="#" class="dropdown-item">
-            <i class="material-icons">layers</i>Maintenance
-            </a>
-            <hr>
-            <a href="gallery.html" class="dropdown-item">
-                <i class="material-icons">layers</i>Gallery
-            </a>
-            </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://twitter.com/urban_barchef" target="_blank" data-original-title="Follow us on Twitter">
-              <i class="fa fa-twitter"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.facebook.com/Otownbarrels" target="_blank" data-original-title="Like us on Facebook">
-              <i class="fa fa-facebook-square"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.instagram.com/UrbanBarChef" target="_blank" data-original-title="Follow us on Instagram">
-              <i class="fa fa-instagram"></i>
-              </a>
-            </li>  
-            </ul>
-        </div>
-      </div>
-    </nav>
+}   
+ include('header.html');?>
 
 
 
 
-    <div class="page-header header-filter" data-parallax="true" style=" background-image: url('../assets/img/backgrounds/speakeasy_bar.jpg'); ">
+    <div class="page-header header-filter" data-parallax="true" style=" background-image: url('./assets/img/backgrounds/speakeasy_bar.jpg'); ">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
@@ -318,36 +238,4 @@ if (isset($_POST['submit'])){
   </div>
 </div>
 
-
-        
-<footer class="footer ">    
-  <div class="container">
-    <div class="copyright pull-left">
-     &copy; <script>document.write(new Date().getFullYear())</script>, Urban Barrel Company
-    </div>
-    <nav class="pull-right">
-      <ul>
-        <li>
-          <a href="index.html">
-            Urban Barrel Company
-          </a>
-        </li>
-      </ul>
-    </nav>      
-  </div>
-</footer>
-<!--   Core JS Files   -->
-    <script type="text/javascript" src="../assets/js/submitForm.js"></script>
-    <script src="../assets/js/core/jquery.min.js"></script>
-    <script src="../assets/js/core/popper.min.js"></script>
-    <script src="../assets/js/bootstrap-material-design.js"></script>
-    <!--  Plugin for Date Time Picker and Full Calendar Plugin  -->
-    <script src="../assets/js/plugins/moment.min.js"></script>
-    <!--  Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
-    <script src="../assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
-    <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-    <script src="../assets/js/plugins/nouislider.min.js"></script>
-    <!-- PayPal script -->
-    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
-  </body>
-</html>
+<?php include('footer.html');?>

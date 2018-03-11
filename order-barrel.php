@@ -6,39 +6,22 @@
     2. User can place order directly on site.
     3. User can see products immediately.
     4. Minimal navigation necessary on user's behalf. -->
+<?php include('header.html');?>
  
-    <!DOCTYPE html>
-    <html lang="en">
-
-    <head>
-
-    <title>
-    Urban Barrel Company
-    </title>
-
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" href="../assets/img/apple-icon.png">
-    <link rel="icon" href="../assets/img/favicon.png">
-    <!-- Fonts and icons -->
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="../assets/css/material-kit.css?v=2.0.0">
-    <!-- PayPal -->
-    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
-    <link rel="stylesheet" href="../assets/css/font_darkener.css">
-    </head>
-
-    <body class="landing-page ">
-    <div class="main main-raised">
-    <div class="container">
-    <div class="section text-center">
-      <div class="row">
-        <div class="col-md-8 ml-auto mr-auto">
-          <h2 class="title">Order A Custom Barrel</h2>
-          <h4 class="title">For Yourself Or A Loved One</h4>
+  <div class="page-header header-filter" data-parallax="true" style="background-image: url('./assets/img/backgrounds/banner.jpg');"></div>
+  <div class="main main-raised">
+    <div class="profile-content">
+      <div class="container">
+          <div class="row">
+            <div class="col-md-8 ml-auto mr-auto">
+               <div class="profile">
+                    <div class="avatar">
+                        <img src="./assets/img/faces/logo.jpg" alt="Circle Image" class="img-raised rounded-circle img-fluid">
+                    </div>
+                    <div class="name">
+                        <h3 class="title">Order a Custom Barrel</h3>          
+                    </div>
+                </div>          
               <div class="form-group">
                 <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
                   <input type="hidden" name="cmd" value="_s-xclick">
@@ -68,7 +51,6 @@
                 </form>
                 <p><!-- spacer --></p>
                 <br>
-
                 <!-- View Cart -->
                 <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
                   <input type="hidden" name="cmd" value="_s-xclick">
@@ -103,36 +85,7 @@
         </div>
       </div>
     </div>
-</div>
-</div>
-
-
-        
-<footer class="footer ">    
-  <div class="container">
-    <div class="copyright pull-left">
-     &copy; <script>document.write(new Date().getFullYear())</script>, <a href="index.html" style="text-decoration: none; ">Urban Barrel Company</a>
-    </div>
-    <!-- <nav class="pull-right">
-      <ul>
-        <li>
-          
-        </li>
-      </ul>
-    </nav> -->      
   </div>
-</footer>
-<!--   Core JS Files   -->
-    <script type="text/javascript" src="../assets/js/submitForm.js"></script>
-    <script src="../assets/js/core/jquery.min.js"></script>
-    <script src="../assets/js/core/popper.min.js"></script>
-    <script src="../assets/js/bootstrap-material-design.js"></script>
-    <!--  Plugin for Date Time Picker and Full Calendar Plugin  -->
-    <script src="../assets/js/plugins/moment.min.js"></script>
-    <!--  Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
-    <script src="../assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
-    <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-    <script src="../assets/js/plugins/nouislider.min.js"></script>
-    <!-- PayPal script -->
-  </body>
-</html>
+</div>
+
+<?php include('footer.html');?>

@@ -1,0 +1,43 @@
+<!-- END CHANGEABLE CONTENT -->
+<?php // Script 13.4 - footer.html
+
+// Display general admin links...
+// - if the user is an administrator and it's not the logout.php page
+// - or if the $loggedin variable is true (i.e., the user just logged in)
+
+if ((is_administrator() && basename($_SERVER['PHP_SELF'] != './blog/logout.php'))
+OR (isset($loggedin) && $loggedin)) {
+	
+	// Create the links:
+	print '<hr><h3>Site Admin</h3><p><a href=".blog/add_quote.php">Add Post</a> <->
+		<a href=".blog/view_quotes.php">View All Posts</a> <->
+		<a href=".blog/logout.php">Logout</a></p>';
+
+}
+
+?>
+	
+<footer class="footer ">    
+    <div class="container">
+        <div class="copyright pull-left">
+            <a href="index.php">
+            &copy; <script>document.write(new Date().getFullYear())</script>, Urban Barrel Company
+        </div>
+    </div>
+</footer>
+
+
+<!--   Core JS Files   -->
+<script src="./assets/js/core/jquery.min.js"></script>
+<script src="./assets/js/core/popper.min.js"></script>
+<script src="./assets/js/bootstrap-material-design.js"></script>
+<!--  Plugin for Date Time Picker and Full Calendar Plugin  -->
+<script src="./assets/js/plugins/moment.min.js"></script>
+<!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
+<script src="./assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
+<!--	Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+<script src="./assets/js/plugins/nouislider.min.js"></script>
+<!-- Material Kit Core initialisations of plugins and Bootstrap Material Design Library -->
+<script src="./assets/js/material-kit.js?v=2.0.0"></script>   
+    </body>
+</html>

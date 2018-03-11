@@ -1,5 +1,5 @@
 <?php // Script 13.3 - header.html
-include('functions.php');
+include('./blog/functions.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,14 +11,12 @@ include('functions.php');
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <!-- Favicons -->
-  <link rel="apple-touch-icon" href="../assets/img/apple-icon.png">
-  <link rel="icon" href="../assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="./assets/img/apple-icon.png">
+  <link rel="icon" href="./assets/img/favicon.png">
   <!-- Fonts and icons -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="../assets/css/material-kit.css?v=2.0.0">
-  <link rel="stylesheet" href="../assets/css/font_darkener.css">
-
+  <link rel="stylesheet" href="./assets/css/material-kit.css?v=2.0.0">
 </head>
 
 <body class="profile-page ">
@@ -26,7 +24,7 @@ include('functions.php');
 
     <div class="container">
       <div class="navbar-translate">
-        <a class="navbar-brand" href="index.html">Urban Barrel Company</a>
+        <a class="navbar-brand" href="#">Urban Barrel Company</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
           <span class="navbar-toggler-icon"></span>
@@ -40,32 +38,32 @@ include('functions.php');
               <i class="material-icons">apps</i> About
           </a>
           <div class="dropdown-menu dropdown-with-icons">
-            <a href="#" class="dropdown-item">
+            <a href="index.php" class="dropdown-item">
                 <i class="material-icons">layers</i>Product
             </a>
             
-            <a href="packages.html" class="dropdown-item">
+            <a href="packages.php" class="dropdown-item">
                 <i class="material-icons">layers</i>Packages
             </a>
             <hr>
-            <a href="materials.html" class="dropdown-item">
+            <a href="materials.php" class="dropdown-item">
                 <i class="material-icons">layers</i>Materials
             </a>
             
-            <a href="maintenance.html" class="dropdown-item">
+            <a href="maintenance.php" class="dropdown-item">
                 <i class="material-icons">layers</i>Maintenance
             </a>
             <hr>
-            <a href="gallery.html" class="dropdown-item">
+            <a href="gallery.php" class="dropdown-item">
                 <i class="material-icons">layers</i>Gallery
             </a>
-            <a href="blog.html" class="dropdown-item">
-                <i class="material-icons">layers</i>Blog
+            <a href="#" class="dropdown-item" disabled>
+                <i class="material-icons">layers</i>Blog - Coming Soon!
             </a>
           </div>
         </li>
         <li class="nav-item">
-					<a class="nav-link" href="order-a-barrel.html">
+					<a class="nav-link" href="order-barrel.php">
 						<i class="material-icons">add_shopping_cart</i> Order A Custom Barrel
 					</a>
 				</li>
@@ -88,5 +86,4 @@ include('functions.php');
     </div>
   </div>
 </nav>
-<body>
 		<!-- BEGIN CHANGEABLE CONTENT -->
