@@ -17,7 +17,7 @@
 	                            <img src="./assets/img/faces/logo.jpg" alt="Circle Image" class="img-raised rounded-circle img-fluid">
 	                        </div>
 	                        <div class="name">
-	                            <h3 class="title">Take care of your barrel &lt;3</h3>					
+	                            <h3 class="title">Take care of your barrel</h3>					
 								          </div>
 	                    </div>
                 

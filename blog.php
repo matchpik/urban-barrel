@@ -5,30 +5,30 @@
  - OR, a randomly picked favourite quote */
 
  include('header.html');?>
- 
-  <div class="page-header header-filter" data-parallax="true" style="background-image: url('./assets/img/backgrounds/banner.jpg');"></div>
-	<div class="main main-raised">
-		<div class="profile-content">
-            <div class="container">
-                <div class="row">
-	                <div class="col-md-6 ml-auto mr-auto">
-        	           <div class="profile">
-	                        <div class="avatar">
-	                            <img src="./assets/img/faces/logo.jpg" alt="Circle Image" class="img-raised rounded-circle img-fluid">
-	                        </div>
-	                        <div class="name">
-	                            <h3 class="title">Our Blog</h3>					
-								          </div>
-	                    </div>
-                
-    	            </div>
-                </div>
 
-                <div class="description text-center" id="product">
-                    <h5 class="description">Coming Soon.<br></h5>
-                </div>
+<div class="page-header header-filter" data-parallax="true" style="background-image: url('./assets/img/backgrounds/banner.jpg');"></div>
+<div class="main main-raised">
+	<div class="profile-content">
+        <div class="container">
+                <div class="col-md-6 ml-auto mr-auto">
+    	           <div class="profile">
+                        <div class="avatar">
+                            <img src="./assets/img/faces/logo.jpg" alt="Circle Image" class="img-raised rounded-circle img-fluid">
+                        </div>
+                        <div class="name">
+                            <h3 class="title">Our Blog</h3>					
+						</div>
+						<a href="https://www.youtube.com/watch?v=9pJwte9piVE" target="_blank" class="btn btn-danger btn-raised btn-lg">
+                    		<i class="fa fa-play"></i> Watch video
+                		</a>
+                    </div>
+	            </div>
+        	</div>
+            <div class="description text-center" id="product">
+                <h5 class="description">Coming Soon.<br></h5>
             </div>
         </div>
-	</div>
+    </div>
+</div>
 
  <?php include('footer.html');?>
